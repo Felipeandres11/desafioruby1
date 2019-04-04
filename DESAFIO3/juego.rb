@@ -1,5 +1,3 @@
-
-
 jugadas = ["piedra","papel","tijera"]
 
 jugadaU = ARGV[0]
@@ -8,8 +6,10 @@ jugadaPC = jugadas[rand(0..2)]
 
 if jugadaU == "piedra" && jugadaPC == "tijera"
   puts "Ganaste Jugador. El PC jugo Tijera y tu Piedra"
+
 elsif jugadaU == "papel" && jugadaPC == "piedra"
   puts "Ganaste Jugador. El PC jugo Piedra y tu Papel"
+
 elsif jugadaU == "tijera" && jugadaPC == "papel"
   puts "Ganaste Jugador. El PC Jugo Papel y tu Tijera"
 
@@ -23,5 +23,6 @@ elsif jugadaPC == "piedra" && jugadaU == "tijera"
   puts "Lo siento, el PC ocupo piedra y tu tijera, PERDISTE!!! "
 
 else
-  puts "Empate"
+  puts "Empataste el jugador y el PC hicieron la misma jugada"
+
 end

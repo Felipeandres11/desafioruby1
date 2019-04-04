@@ -1,3 +1,6 @@
+#EL CAMBIO QUE HICE EN ESTE EJERCICIO, FUE ASIGNARLE UNA VARIABLE al 
+#ARRAY PARA QUE LA LECTURA DEL codigo fuera más entendible
+
 usuarios=ARGV[0]
 precio=ARGV[1]
 preciopremium=ARGV[2]

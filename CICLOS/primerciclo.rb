@@ -1,5 +1,3 @@
-
-
 puts "Ingrese un valor entre 1 y 10"
 valor = gets.to_i
 

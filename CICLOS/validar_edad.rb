@@ -14,7 +14,7 @@ end
 
 validar_edad(edad)
 
-edades = [20,30,18,15,42]
+
 
 validar_edad aletorio.rand(100)
 validar_edad aletorio.rand(18)

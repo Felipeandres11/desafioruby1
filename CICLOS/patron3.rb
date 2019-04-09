@@ -2,11 +2,11 @@ n = ARGV[0].to_i
 
 n.times do |i|
 
-  if i%7==0 or i%7==1
+  if i%6==0 or i%6==1
     print '.'
-  elsif i%7==2 or i%7==3
+  elsif i%6==2 or i%6==3
     print '*'
-  elsif i%7==4 or i%7==5
+  elsif i%6==4 or i%6==5
     print '|'
   end
 end

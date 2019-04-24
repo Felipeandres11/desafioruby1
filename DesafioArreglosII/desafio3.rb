@@ -29,6 +29,6 @@ data = open('notas.data').readlines
 
   data.each do |dato|
 
-    puts nota_mas_alta(dato)
+    print nota_mas_alta(dato)
 
   end

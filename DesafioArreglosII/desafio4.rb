@@ -1,13 +1,23 @@
 
-array = [5,3,2,5,10]
 
-def chart(array)
+recibir = ARGV
+numbers = recibir.to_a
 
-  array.each do |dato|
 
-    puts "|  #{"*" * dato}"
+def chart(numbers, size=2)
+
+  numbers.each do |dato|
+
+    puts "|  #{"*" * dato.to_i * size}"
+
   end
+
+
 end
 
 
-print chart(array)
+
+
+
+
+return chart(numbers,4)

@@ -20,6 +20,7 @@ def converter(ventas)
   q = ['Q1', 'Q2', 'Q3', 'Q4']
   array.each_slice(3) do |a|
 
+    puts a.sum
     #dato = a.to_a
 
     #quarters = q.zip(a).to_h

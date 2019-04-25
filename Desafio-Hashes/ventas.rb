@@ -19,12 +19,10 @@ def converter(ventas)
   array = ventas.values
   q = ['Q1', 'Q2', 'Q3', 'Q4']
   array.each_slice(3) do |a|
-
-    puts a.sum
+    suma = a.sum
     #dato = a.to_a
 
-    #quarters = q.zip(a).to_h
-
+    quarters = q.zip(a).to_h
 
 
   end

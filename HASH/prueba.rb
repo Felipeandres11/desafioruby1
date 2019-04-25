@@ -28,7 +28,7 @@ def build_web_page(body)
 
     body.map {|y| html += "\t <li><img src=\"#{y['img_src']}\"></li>\n" }
 
-    html += "</ul>\t</body>\t</html>"
+    html += "</ul>\n</body>\n</html>"
 
     File.write('index.html', html)
 end
@@ -46,4 +46,4 @@ end
 
 build_web_page(body)
 
-print photos_count(body)
+puts photos_count(body)

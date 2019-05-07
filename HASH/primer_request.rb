@@ -19,3 +19,6 @@ body.each do |post|
 
   puts post['title']
 end
+
+
+def buid_web_page()

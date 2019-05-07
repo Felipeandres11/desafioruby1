@@ -38,7 +38,7 @@ def photos_count(body)
 
     nuevo = {}
 
-    body.map {|z| nuevo[z['camera']['name']] = 1 + nuevo[z['camera']['name']].to_i}
+    body.map {|z| nuevo[z['camera']['name']].nil? ? 0 :  += 1}
 
     return nuevo
 

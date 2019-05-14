@@ -21,6 +21,7 @@ class Product
     end
 
     file = []
+
     filtro.each do |filt|
       file << filt.join(",")
     end

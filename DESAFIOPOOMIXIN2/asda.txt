@@ -1,0 +1,8 @@
+if self.class == Rectangulo
+     p = 2*(self.largo + self.ancho)
+     puts p
+
+elsif self.class == Cuadrado
+     p = 2*(self.lado + self.lado)
+     puts p
+end

@@ -21,9 +21,12 @@
      </div>
     <% end %>
   </div>
-</div>
+
 
 
 <br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+  <div class="col-sm-3">
+    <%= link_to 'New Tweet', new_tweet_path %>
+    <%= render 'form', tweet: @new_tweet %>
+  </div>
+</div>

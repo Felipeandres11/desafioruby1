@@ -2,7 +2,7 @@
 
 <h1>Students</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -11,14 +11,17 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @students.each do |student| %>
       <tr>
+       <div class="text-center">
         <td><%= student.name %></td>
         <td><%= student.age %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td></td>
+        <td> <button type="button" class="btn btn-primary"> <%= link_to 'Show', student %></button></td>
+        <td> <button type="button" class="btn btn-success disabled"><%= link_to 'Edit', edit_student_path(student) %> </button></td>
+        <td> <button type="button" class="btn btn-danger"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+       </div>
       </tr>
     <% end %>
   </tbody>

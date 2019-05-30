@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Age</th>
+      <th>Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
        <div class="text-center">
         <td><%= student.name %></td>
         <td><%= student.age %></td>
+        <td><%= student.email %></td>
         <td></td>
         <td> <button type="button" class="btn btn-primary"> <%= link_to 'Show', student %></button></td>
         <td> <button type="button" class="btn btn-success disabled"><%= link_to 'Edit', edit_student_path(student) %> </button></td>

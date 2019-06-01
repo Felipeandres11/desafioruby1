@@ -5,13 +5,11 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
     @tweets = Tweet.all
-    @new_tweet = Tweet.new
   end
 
   # GET /tweets/1
   # GET /tweets/1.json
   def show
-
   end
 
   # GET /tweets/new
@@ -30,7 +28,7 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to tweets_path, notice: 'Tweet was successfully created.' }
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }
@@ -44,7 +42,7 @@ class TweetsController < ApplicationController
   def update
     respond_to do |format|
       if @tweet.update(tweet_params)
-        format.html { redirect_to tweets_path, notice: 'Tweet was successfully updated.' }
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully updated.' }
         format.json { render :show, status: :ok, location: @tweet }
       else
         format.html { render :edit }
@@ -66,9 +64,7 @@ class TweetsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
-
       @tweet = Tweet.find(params[:id])
-
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

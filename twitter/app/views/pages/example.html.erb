@@ -1,5 +1,24 @@
-<h1> Ejemplo </h1>
-<%= link_to "hola", pages_about_path %>
-<% @product.each do |p| %>
-  <h1>  <%= p %> </h1>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta odio aliquam animi beatae. Fugiat sapiente, esse dolor natus eligendi a voluptatem ad? Repellat animi quia quis? Porro quisquam debitis laudantium!</p>
+
+    
+
+    <%= link_to "Hola", root_path %>
+
+    
+
+    <% @products.each do |p| %>
+        <h1> <%= p %> </h1>
+    <%end%>
+    
+</body>
+</html>

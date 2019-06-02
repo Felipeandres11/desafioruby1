@@ -4,8 +4,13 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.all
-    @new_tweet = Tweet.new
+    if params[:query].present?
+      @tweets = Tweet.where(content: params[:query])
+    else  
+      @tweets = Tweet.all
+    end
+      @new_tweet = Tweet.new
+
   end
 
   # GET /tweets/1
@@ -70,6 +75,6 @@ class TweetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params.require(:tweet).permit(:content)
+      params.require(:tweet).permit(:content, :title)
     end
 end

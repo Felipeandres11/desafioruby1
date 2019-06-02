@@ -6,8 +6,10 @@
 
   <div class="row">
     <div class="col-9">
-      <table>
+     <% if @tweets.any? %>
+      <table class="py-3">
         <tr>
+          <th> Titulo    </th>
           <th> Contenido </th>
           <th> Editar </th>
           <th> Eliminar </th>
@@ -16,6 +18,7 @@
         <% @tweets.each do |tweet| %>
           
             <tr>
+              <td><%= tweet.title %></td>
               <td><%= tweet.content %></td>
               <td><%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-primary' %></td>
               <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?',}, class:'btn btn-warning' %></td>
@@ -23,18 +26,15 @@
         
         
         <% end %>
+         <% else %>
+          <h1> No hay Tweets con el contenido <%= params[:query] %> </h1>
+        <% end %> 
         </table>
       </div>
+
     
-      
-
   
-
-
-<br>
-<div class="col-3">
-
-<%= render 'form', tweet: @new_tweet %>
-</div>
-
+  <div class="col-3">
+    <%= render 'form', tweet: @new_tweet %>
+  </div>
 </div>
